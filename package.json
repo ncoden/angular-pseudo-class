@@ -2,10 +2,11 @@
   "name": "angular-pseudo-class",
   "description": "Take control on CSS pseudo-classes !",
   "version": "0.1.1",
-  "main": "lib/angular-pseudo-class.js",
+  "main": "lib/index.js",
   "dependencies": {},
   "scripts": {
-    "build": "babel src --out-file lib/angular-pseudo-class.js",
+    "build": "babel src -d lib",
+    "dist": "npm run build && webpack --optimize-minimize lib/index.js dist/angular-pseudo-class.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +26,8 @@
     "babel-core": "^6.5.2",
     "babel-preset-es2015": "^6.5.0",
     "jquery": "^2.1.4",
-    "jquery-pseudo-class": "^0.1.0"
+    "jquery-pseudo-class": "^0.1.0",
+    "webpack": "^1.12.13"
   },
   "bugs": {
     "url": "https://github.com/ncoden/angular-pseudo-class/issues"
