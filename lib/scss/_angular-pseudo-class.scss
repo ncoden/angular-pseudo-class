@@ -1,0 +1,5 @@
+@mixin pseudo-class($event) {
+  &.pseudo-class--#{$event} {
+    @content
+  }
+}
