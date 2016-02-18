@@ -2,10 +2,10 @@
   "name": "angular-pseudo-class",
   "description": "Take control on CSS pseudo-classes !",
   "version": "0.1.4",
-  "main": "lib/index.js",
+  "main": "lib/js/index.js",
   "scripts": {
-    "build": "babel src -d lib",
-    "dist": "npm run build && webpack --optimize-minimize lib/index.js dist/angular-pseudo-class.js",
+    "build": "babel src -d lib/js",
+    "dist": "npm run build && webpack --optimize-minimize lib/js/index.js dist/angular-pseudo-class.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
