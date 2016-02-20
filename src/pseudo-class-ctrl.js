@@ -1,18 +1,22 @@
-function PseudoClassCtrlLink(scope, element, attrs) {
+function PseudoClassCtrlLink(scope, element, attrs, config) {
+  'ngInject';
+
   var pseudoClasses = attrs['pseudoClassCtrl'] || 'active hover';
   pseudoClasses = pseudoClasses.split(' ');
 
-  for (var i = 0; i < pseudoClasses.length; i++) {
-    (function(pseudoClass) {
+  for (i in pseudoClasses) {
+    (function(i) {
+      var class_ = config.classPrefix + pseudoClasses[i];
+
       element.onPseudoClass(pseudoClass,
         function(e) {
-          element.addClass('pseudo-class--' + pseudoClass);
+          element.addClass(class_);
         },
         function(e) {
-          element.removeClass('pseudo-class--' + pseudoClass);
+          element.removeClass(class_);
         }
       )
-    })(pseudoClasses[i]);
+    })(i);
   }
 }
 

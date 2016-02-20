@@ -1,5 +1,7 @@
+$pseudo-class__class-prefix: "pseudo-class--";
+
 @mixin pseudo-class($event) {
-  &.pseudo-class--#{$event} {
+  &.#{$pseudo-class__class-prefix}#{$event} {
     @content
   }
 }
