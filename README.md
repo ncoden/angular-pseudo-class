@@ -9,6 +9,15 @@ Provides a set of jQuery, Angular and Sass features to easily control the CSS ps
 npm install angular-pseudo-class --save
 ```
 
+Import in Angular
+```javascript
+import pseudoClass from 'angular-pseudo-class';
+
+let app = angular.module('myApp', [
+  pseudoClass
+]);
+```
+
 If you use Sass, import the mixins (path to `node_modules` can be different).
 ```sass
 @import "./node_modules/angular-pseudo-class/angular-pseudo-class";
