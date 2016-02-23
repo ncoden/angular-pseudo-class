@@ -1,4 +1,3 @@
-import jQuery from 'jquery';
 import jQueryPseudoClass from 'jquery-pseudo-class';
 
 import {config} from './config.js';
