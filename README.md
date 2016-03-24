@@ -6,7 +6,7 @@ Provides a set of jQuery, Angular and Sass features to easily control the CSS ps
 
 ## Install
 ```shell
-npm install angular-pseudo-class --save
+npm install --save angular-pseudo-class
 ```
 
 Import in Angular
